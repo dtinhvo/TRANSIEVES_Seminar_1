@@ -1,0 +1,60 @@
+## Numerical Methods
+### Governing equations
+
+Navier-Stokes Equations:
+
+:::: {.columns}
+::: {.column width="35%"}
+Species Transport
+
+Gauss Law
+:::
+::: {.column }
+$$
+  \frac{ \partial c_{i} }{ \partial t } + \mathbf{u} \cdot \nabla c_{i} = \nabla \cdot(D_{i}\nabla   c_{i})
+	+ \nabla \cdot 
+	[(
+    \underbrace{ D_{i} \dfrac{ez_{i}}{kT} }
+    _{ \text{Stokes-Einstein relation} }\nabla \Psi)c_{i}
+    ]
+$$
+
+$$
+  \nabla^2 \Psi _{E}   =\frac{-\rho}{\epsilon\epsilon_{0}} = \frac{-F \sum_{i} z_{i}  c_{i}}{ \epsilon\epsilon_{0}} 
+$$
+:::
+
+
+::::
+
+## Numerical Methods
+
+### Modelling approaches
+
+test
+
+:::: {.columns}
+::: {.column width="50%"}
+Mesoscale simulations <!-- TODO openfoam benchmark image -->
+
+:::
+::: {.column width="50%"}
+Nanoscale simulations
+
+![](@Medias/LAMMPS.jpg){height="2in"}
+
+:::
+
+::::
+
+
+## Numerical Methods
+
+### Modelling approaches 
+::: {.block style="text-align:center"}
+-> Coupling between scales 
+:::
+
+<!-- TODO CPL -->
+![](@Medias/CPL.png){height="15%" fig-align="center"}
+

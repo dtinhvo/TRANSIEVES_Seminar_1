@@ -1,0 +1,118 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz@8..60&display=swap');*/
+
+
+:root {
+  --h1-font-size: 2vw;
+  --h2-font-size: 1.5vw;
+
+  --h1-top-margin: 5px;
+  --h2-top-margin: 5px;
+
+
+  --h1-left-margin:0.5vw;
+  --h2-left-margin:0.75vw;
+
+
+  --header-font-color: #80221C;
+  --header-margin: 0px 0px 0px 0px;
+  --stanford-red: #80221C;
+  --stanford-red-1a: #450b08; // 
+  
+  --stanford-white: #FFFDFD;
+  --header-font-family:  "Fira Sans", "Roboto", "Droid Serif", serif;
+
+  --logo-right-margin: 18px;
+  --logo-right-width: 180px;
+
+}
+
+.reveal .reveal-header {
+  top: 0;
+  margin: 0px 0px 2px 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  font-family: var(--header-font-family);
+}
+
+.reveal .reveal-header p {
+  text-align: left;
+  margin: var(--header-margin);
+}
+
+/* TODO h1 and h2 should get right limiters */
+/* h1 */
+.reveal-header .sc-title p { 
+  color: var(--stanford-red);
+
+  float: left;
+  position: absolute;
+  top: var(--h1-top-margin);
+  left: 1vw;
+  margin-left: var(--h1-left-margin);
+  font-size: var(--h1-font-size) ;
+  font-weight: 900 ;
+}
+/* h2 */
+.reveal-header .sb-title p { 
+  color: var(--stanford-red-1a);
+
+  float: left !important; 
+  text-align: left;
+  position: absolute; 
+  top: calc(var(--h1-top-margin) + var( --h1-font-size ) + var(--h2-top-margin));
+  left: 1vw;
+  margin-left: var(--h2-left-margin);
+
+  font-size: var(--h2-font-size);
+  font-weight: 700 ;
+}
+
+
+.reveal-header .sc-title p,
+.reveal-header .sb-title p {
+  filter: brightness(0.95);
+}
+
+.reveal-header.no-logo .sc-title p {margin-left: 2vw}
+
+
+.reveal .header-logo svg,
+.reveal .header-logo img {
+  margin: var(--header-margin);
+  padding-left: 0vw;
+  padding-top: 0px;
+  position: absolute;
+  bottom: unset !important;
+  right: var(--logo-right-margin) !important;
+  top: 100px !important; 
+  left: unset !important;
+  /* height: 100px ; */
+  height: unset;
+  width: unset;
+  max-width: var(--logo-right-width) !important;
+  max-height: unset !important;
+  border: 0px;
+}
+
+
+
+
+/* .reveal .slides { margin-top: 3vh !important;} */
+.inverse-header { color: #c5d7ce !important;}
+
+
+div.slides section:not(.title-slide):not(#title-slide):not(.stack) {
+  padding-top: 1em;
+}
+
+/* On screens that are 600px or less*/
+@media screen and (max-width: 600px) {
+  .reveal .header-logo img {
+    padding-top: 0px;
+    margin: 0px 0px 5px 0px;
+  }
+
+  .reveal-header .sc-title p { margin-left: 1vw; }
+  .reveal-header.no-logo .sc-title p {margin-left: 2vw; }
+}

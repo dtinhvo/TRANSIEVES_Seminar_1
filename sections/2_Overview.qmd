@@ -1,0 +1,29 @@
+# Project overview
+1. Physical phenomenon
+2. Numerical Methods
+
+## Physical phenomenon
+Electrically driven flows <!-- TODO EField flow photo -->
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Specifically focusing on double layer regime 
+
+![](@Medias/DL.png){width="7in"} <!-- TODO!! cite 10.1063/5.0043963 -->
+
+- Resolving the Stern layer numerically is the main challenge
+    - Understood as being exactly one atom thick
+    - exponential value increase
+
+:::
+
+::: {.column width="50%"}
+Application to nanopores
+
+![](@Medias/nanopore.png)
+
+:::
+
+::::
+

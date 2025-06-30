@@ -1,0 +1,25 @@
+title: tvo_TRANSIEVES
+author: Tinh Vo
+version: 0.0.1
+quarto-required: ">=1.2.0"
+contributes:
+  format:
+      revealjs:
+          logo: resources/TU_Darmstadt_Logo.svg
+          header-logo: resources/TRANSIEVES.png
+          # TODO csl: IEEE?.csl
+          theme: TRANSIEVES.scss
+          slide-number: true
+          preview-links: true
+          progress: true
+          width: 2100 # somehow forcing resolution makes sizing plays nice
+          height: 1080
+          margin: 0.05
+          self-contained: true
+          sc-sb-title: true
+          title-slide-attributes: 
+            # data-background-image: "resources_main/watercolour_sys02_img41_stormy-seas.jpg"
+            center-title-slide: false
+          include-before: [ '<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {enableAssistiveMml: false}});</script>']
+# More inspirations:
+# https://github.com/maltehueckstaedt/dzhw_revealjs_template/blob/main/_extensions/dzhw

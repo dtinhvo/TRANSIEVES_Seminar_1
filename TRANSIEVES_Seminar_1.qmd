@@ -1,0 +1,58 @@
+---
+title: "Highly accurate simulation of electrokinetic transport"
+footer: "Tinh Vo, TRANSIEVES Seminar"
+author: 
+  name: Tinh Vo
+  affiliation: Computational Multiphase Flow, TU Darmstadt
+date: last-modified
+date-format: "DD MMM, YYYY"
+format: 
+  tvo_TRANSIEVES-revealjs:
+    center-title-slide: false
+    title-slide: false
+  revealjs: 
+    css: tvo_TRANSIEVES/styles.css
+    include-in-header: persistent-header/persistent-header.html # currently have no effect
+    title-slide: false
+filters: 
+  - reveal-header
+slide-level: 4 # affects reveal-header persistence
+number-sections: false
+
+---
+
+:::::: {.r-stack }
+
+:::: {.columns style="width: 100%;"}
+
+::: {.column width="50%"}
+Tinh Vo, M.Sc.
+
+![](@Medias/me.jpg){width="6in"}
+:::
+
+::: {.column width="50%" style="text-align:right"}
+Advisor: Dr.Ing. Holger Marschall
+
+![](@Medias/HolgerMarschall.jpg){width="7in"}
+:::
+
+:::: 
+
+:::: {.block .fragment}
+![Double layer](@Medias/DL.png){width="6in"}  <!-- TODO! replace with sth else -->
+::::
+
+:::::: 
+
+
+
+{{< include sections/1_Personel.qmd>}}
+ 
+{{< include sections/2_Overview.qmd>}}
+
+{{< include sections/3_NumericalMethods.qmd>}}
+ 
+ 
+
+{{< include sections/dummy.qmd >}}
