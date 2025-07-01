@@ -1,0 +1,27 @@
+# Persons
+
+:::::: {.r-stack }
+
+:::: {.columns style="width: 100%;"}
+
+::: {.column width="50%"}
+Tinh Vo, M.Sc.
+
+![](@Medias/me.jpg){width="6in"}
+:::
+
+::: {.column width="50%" style="text-align:right"}
+Advisor: Dr.Ing. Holger Marschall
+
+![](@Medias/HolgerMarschall.jpg){width="7in"}
+:::
+
+:::: 
+
+:::: {.block .fragment}
+![Double layer](@Medias/DL.png){width="6in"}  <!-- TODO! replace with sth else -->
+::::
+
+:::::: 
+
+

@@ -35,7 +35,8 @@ test
 
 :::: {.columns}
 ::: {.column width="50%"}
-Mesoscale simulations <!-- TODO openfoam benchmark image -->
+Mesoscale simulations 
+<!-- TODO openfoam benchmark image -->
 
 :::
 ::: {.column width="50%"}
