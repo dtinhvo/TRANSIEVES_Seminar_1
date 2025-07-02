@@ -18,9 +18,10 @@ Advisor: Dr.Ing. Holger Marschall
 
 :::: 
 
-:::: {.block .fragment}
-![Double layer](@Medias/DL.png){width="6in"}  <!-- TODO! replace with sth else -->
+:::: {.block .fragment style="text-align:center;" }
+![](@Medias/B3.png){height=350px}
 ::::
+
 
 :::::: 
 

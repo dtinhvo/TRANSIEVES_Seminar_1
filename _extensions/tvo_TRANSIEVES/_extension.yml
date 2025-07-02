@@ -12,9 +12,9 @@ contributes:
           slide-number: true
           preview-links: true
           progress: true
-          width: 2100 # somehow forcing resolution makes sizing plays nice
-          height: 1080
-          margin: 0.05
+          width: 1600 # adapting size to viewport not possible ??!? 
+          height: 900
+          margin: 0.1
           self-contained: true
           sc-sb-title: true
           title-slide-attributes: 

@@ -1,6 +1,58 @@
 # Project overview
-1. Physical phenomenon
-2. Numerical Methods
+
+
+Investigation targets:
+
+:::: {.columns style="width: 100%;"}
+
+::: {.column width="50%"}
+
+::: {.fragment fragment-index=1}
+
+- Governing mechanics for ion transport rates
+- Near walls
+- At high wall change
+
+::: 
+
+:::
+
+
+::: {.column width="50%" style="text-align:left" .fragment fragment-index=3}
+
+Application targets:
+
+- Transient nanopores 
+  - Optimize pore structure 
+  - Optimize switching frequency
+
+:::
+
+::::
+
+<!-- page half -->
+
+:::: {.columns style="width: 100%;" .fragment fragment-index=2}
+
+::: {.column width="50%"}
+
+- Species separation
+  - Permselectivity
+  - Resonance conditions
+:::
+
+::: {.column width="50%" style="text-align:left" .fragment fragment-index=4}
+- Transient electrodialysis
+  - Efficiency gain
+:::
+
+:::: 
+
+
+![](@Medias/nanopore.png){style="text-align:center"}
+
+
+
 
 ## Physical phenomenon
 Electrically driven flows <!-- TODO EField flow photo -->
@@ -10,20 +62,24 @@ Electrically driven flows <!-- TODO EField flow photo -->
 ::: {.column width="50%"}
 Specifically focusing on double layer regime 
 
-![](@Medias/DL.png){width="7in"} <!-- TODO!! cite 10.1063/5.0043963 -->
+![](@Medias/DL.png){width="7in"} 
 
 - Resolving the Stern layer numerically is the main challenge
     - Understood as being exactly one atom thick
     - exponential value increase
+    - Breakdown of continuum assumptions
 
 :::
 
 ::: {.column width="50%"}
 Application to nanopores
 
-![](@Medias/nanopore.png)
+![](@Medias/nanopore.png) 
 
 :::
 
 ::::
 
+::: aside
+[1] X. Wang, K. Liu, and J. Wu, “Demystifying the Stern layer at a metal–electrolyte interface: Local dielectric constant, specific ion adsorption, and partial charge transfer,” The Journal of Chemical Physics, vol. 154, no. 12, Mar. 2021, doi: 10.1063/5.0043963. 
+:::
