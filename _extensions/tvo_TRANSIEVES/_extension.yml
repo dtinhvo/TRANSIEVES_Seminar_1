@@ -9,11 +9,12 @@ contributes:
           header-logo: resources/TRANSIEVES.png
           # TODO csl: IEEE?.csl
           theme: TRANSIEVES.scss
+          css: styles.css
           slide-number: true
           preview-links: true
           progress: true
-          width: 1600 # adapting size to viewport not possible ??!? 
-          height: 900
+          width: 1920 # adapting size to viewport not possible ??!? 
+          height: 1080
           margin: 0.1
           self-contained: true
           sc-sb-title: true

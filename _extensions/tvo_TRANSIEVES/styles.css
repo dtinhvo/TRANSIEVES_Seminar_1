@@ -1,3 +1,12 @@
+:root {
+  --r-block-margin: 3px; 
+  --r-main-font-size: 40px;
+  --r-heading-margin: 0 0 4px 0;
+}
+.reveal .slide aside {
+  bottom: 2em
+}
+
 /* trying to center text */
 .center-text {
   display: flex;

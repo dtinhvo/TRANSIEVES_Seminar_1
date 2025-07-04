@@ -1,18 +1,41 @@
-## Numerical Methods
+# Numerical Methods
 <!-- TODO 1b. Proposed Benchmarks -->
 
 
 ### Governing equations
 
-Navier-Stokes Equations:
 
-:::: {.columns}
-::: {.column width="35%"}
-Species Transport
+:::: {.columns style="width: 100%;"}
 
-Gauss Law
-:::
-::: {.column }
+::: {.column width="50%" .fragment fragment-index=1}
+
+Navier-Stokes Equations
+
+::: 
+<!-- left col -->
+
+
+::: {.column  width="50%" style="text-align:left" .fragment}
+TBD NV desc...
+
+::: 
+<!-- right col -->
+:::: 
+<!-- top cols -->
+
+
+:::: {.columns style="width: 100%;" }
+
+::: {.column width="50%" .fragment}
+
+Species Transport 
+
+
+Gauss law 
+::: 
+<!-- left col -->
+
+::: {.column width="50%" style="text-align:left" }
 $$
   \frac{ \partial c_{i} }{ \partial t } + \mathbf{u} \cdot \nabla c_{i} = \nabla \cdot(D_{i}\nabla   c_{i})
 	+ \nabla \cdot 
@@ -21,20 +44,175 @@ $$
     _{ \text{Stokes-Einstein relation} }\nabla \Psi)c_{i}
     ]
 $$
+$$
+  \nabla^2 \Psi _{E}   =\frac{-\rho_E}{\epsilon\epsilon_{0}} = \frac{-F \sum_{i} z_{i}  c_{i}}{ \epsilon\epsilon_{0}} 
+$$
+::: 
+<!-- right col -->
 
-$$
-  \nabla^2 \Psi _{E}   =\frac{-\rho}{\epsilon\epsilon_{0}} = \frac{-F \sum_{i} z_{i}  c_{i}}{ \epsilon\epsilon_{0}} 
-$$
+:::: 
+<!-- bottom cols -->
+
+## Improvement Proposals
+
+### TBD Thermodynamically consistent flux
+
+
+
+### Implicitly(Block) Coupled solve Nernst-Planck equations
+
+
+
+![coupled Navier-Stokes and Poisson-Nernst-Planck solution system ^[ F. Pimenta and M. A. Alves, “A coupled finite-volume solver for numerical simulation of electrically-driven flows,” Computers & Fluids, vol. 193, p. 104279, Oct. 2019, doi: 10.1016/j.compfluid.2019.104279. ]](@Medias/BlockPNP.png){height="25%" style="text-align:center"}
+
+::: {.block .fragment}
+- Motivation: Numerical
+  - _Segregated_ solvers are numerically _not robust_
+:::
+::: {.block .fragment}
+- Goals:
+  - Numerically robust coupled solver
+  - Convergent
+  - Stable
+	Implementation in OpenFOAM
 :::
 
 
+
+### Sorption-enabled Stern layer
+
+#### Description
+
+:::: {.columns style="width: 100%;" .fragment}
+
+::: {.column width="50%"}
+
+- Motivation: Numerical/Physical
+  - Standard linear discretization does not properly represent exponential (concentration) profiles near walls
+
+
+:::: {.block .fragment}
+
+- Goals:
+  - Subgrid-scale correction
+  - Include sorption processes 
+  
+➡ Increase accuracy near walls without larger mesh
+:::: 
+
+::: 
+<!-- left col -->
+
+::: {.column width="50%" style="text-align:left"}
+![Ion concentration profiles resulting from a classical Nernst-Planck formulation solved analytically (left) ^[J. Fuhrmann, C. Guhlke, A. Linke, C. Merdon, and R. Müller, “Models and Numerical Methods for Electrolyte Flows,” CIM Series in Mathematical Sciences. Springer International Publishing, pp. 183–209, 2019. doi: 10.1007/978-3-030-33116-0_8. ]](@Medias/FuhrmannExpStern.png){height="4in"}
+::: 
+<!-- right col -->
+
+:::: 
+<!-- cols -->
+
+
+*** 
+
+### Sorption-enabled Stern layer
+#### Governing equations
+
+
+
+### TBD Thermodynamically consistent flux
+[Change the construction of the electromigration flux]{.fragment}
+
+
+
+$$
+\frac{ \partial c_{i} }{ \partial t } + \mathbf{u} \cdot \nabla c_{i} = 
+  \underbrace{ \nabla \cdot(D_{i}\nabla   c_{i})
+    + \nabla \cdot  (D_{i} \dfrac{ez_{i}}{kT}\nabla \Psi c_{i}) }  
+  _{ \nabla \cdot \mathbf{J_{i}} }
+$$
+$$  
+  \frac{\partial c_{i}}{\partial t} + \nabla \cdot ( 		 \underbrace{c_{i}\color{red}{\mathbf{v}_{}} } 	_\text{advection}+ \mathbf{J_{i}})   =0
+$$
+
+
+
+
+
+:::: {.columns style="width: 100%;" .fragment}
+
+
+::: {.column width="50%"}
+
+Existing formulation:
+
+$$  
+  \mathbf{J}_{i} =   \underbrace{D_{i}\nabla c_{i} }	_\text{diffusion}	 + 	 \underbrace{\left[  \frac{D_{e,i} z_{i}e}{k_{b} T}  \right]c_{i}(-\nabla  \Psi   )} 	_\text{electromigration}
+$$
+
+::: 
+<!-- left col -->
+
+::::: {.column width="50%" style="text-align:left" .fragment}
+
+
+Improved Nernst-Planck Proposal ^[J. Fuhrmann, C. Guhlke, A. Linke, C. Merdon, and R. Müller, “Models and Numerical Methods for Electrolyte Flows,” CIM Series in Mathematical Sciences. Springer International Publishing, pp. 183–209, 2019. doi: 10.1007/978-3-030-33116-0_8.]
+
+
+:::: {.columns width="100%"}
+
+
+::: {.column style="width:49%;"}
+
+Barycentric velocity:
+
+$$  
+\mathbf{v  } = \frac{1}{\rho} \sum_{i} \rho_{i} \mathcal{v  }_{i}    
+$$  
+
+::: 
+<!-- bottomright left -->
+
+::: {.column style="width: 49%;"}
+
+Flux:
+
+$$  
+\begin{align}  
+\mathbf{J}_{i}  = -\sum _{j =1} ^{N-1} M_{i j} &\left( \nabla \frac{\mu _{j} -\mu _{N}}{T} n_{i} \right. \\ & \quad \left. + \frac{1}{T} \left( \frac{z_{j}}{m_{j}} - \frac{z_{N}}{m_{N}} \right)\nabla \Psi \right)  \\
+\end{align}
+$$
+
+- Conservation requirement:
+
+$$
+\sum_{\alpha{}}^{N}  \mathbf{J}_{\alpha{}} =0
+$$
+
+::: 
+<!-- bottomright right -->
+
 ::::
+<!-- bottomright -->
 
-## Numerical Methods
 
-### Modelling approaches
+::::: 
+<!-- right col -->
 
-test
+:::: 
+<!-- cols -->
+
+
+
+
+
+
+
+
+
+
+
+
+### Atomistic - continuum coupling
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -52,9 +230,7 @@ Nanoscale simulations
 ::::
 
 
-## Numerical Methods
 
-### Modelling approaches 
 ::: {.block style="text-align:center"}
 -> Coupling between scales 
 :::

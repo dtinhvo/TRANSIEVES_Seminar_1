@@ -1,81 +1,45 @@
 # Project overview
 
 
-Investigation targets:
-
-:::: {.columns style="width: 100%;"}
-
-::: {.column width="50%"}
-
-::: {.fragment fragment-index=1}
-
-- Governing mechanics for ion transport rates
-- Near walls
-- At high wall change
-
-::: 
-
-:::
-
-
-::: {.column width="50%" style="text-align:left" .fragment fragment-index=3}
-
-Application targets:
-
-- Transient nanopores 
-  - Optimize pore structure 
-  - Optimize switching frequency
-
-:::
-
-::::
-
-<!-- page half -->
-
-:::: {.columns style="width: 100%;" .fragment fragment-index=2}
-
-::: {.column width="50%"}
-
-- Species separation
-  - Permselectivity
-  - Resonance conditions
-:::
-
-::: {.column width="50%" style="text-align:left" .fragment fragment-index=4}
-- Transient electrodialysis
-  - Efficiency gain
-:::
-
-:::: 
-
-
-![](@Medias/nanopore.png){style="text-align:center"}
-
-
-
-
 ## Physical phenomenon
-Electrically driven flows <!-- TODO EField flow photo -->
+Electrically driven flows
 
 :::: {.columns}
 
-::: {.column width="50%"}
-Specifically focusing on double layer regime 
+::: {.column width="50%" .fragment}
 
-![](@Medias/DL.png){width="7in"} 
+<!-- col++ -->
+:::: {.columns}
+::: {.column  width="35%"}
+- Focuses
+  - Near walls
+  - At high wall change
+:::
 
+::: {.column width="15%" style="text-align:right"}
+![](@Medias/DL.png){height="4in" style="text-align:center"} 
+::: 
+<!-- img overlay -->
+::::
+<!-- col++ -->
+
+:::{.block .fragment}
 - Resolving the Stern layer numerically is the main challenge
     - Understood as being exactly one atom thick
     - exponential value increase
     - Breakdown of continuum assumptions
+:::
+<!-- bottom left -->
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="50%" .fragment}
 Application to nanopores
 
 ![](@Medias/nanopore.png) 
-
+- Charging time 
+- Permselectivity 
+- 
 :::
 
 ::::

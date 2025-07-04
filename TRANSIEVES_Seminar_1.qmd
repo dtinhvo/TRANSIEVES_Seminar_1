@@ -16,7 +16,7 @@ format:
     title-slide: false
 filters: 
   - reveal-header
-slide-level: 4 # affects reveal-header persistence
+slide-level: 3 # affects reveal-header persistence
 number-sections: false
 ---
 
