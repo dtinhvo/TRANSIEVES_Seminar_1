@@ -1,0 +1,18 @@
+# Bonus slides
+
+
+:::: {.columns style="width: 100%;" .fragment}
+
+::: {.column width="50%"}
+![](@Medias/DreyersPNP.png)
+::: 
+<!-- left col -->
+
+::: {.column width="50%" style="text-align:left" .fragment}
+![](@Medias/DreyersPotential.png)
+::: 
+<!-- right col -->
+
+:::: 
+<!-- cols -->
+

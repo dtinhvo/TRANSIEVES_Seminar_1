@@ -1,4 +1,4 @@
-# Persons
+# Persons 
 
 :::::: {.r-stack }
 
@@ -7,19 +7,34 @@
 ::: {.column width="50%"}
 Tinh Vo, M.Sc.
 
-![](@Medias/me.jpg){width="6in"}
+![](@Medias/me.jpg){height="4.7in"}
+
+- Education
+	- Case Western Reserve University – Mechanical Engineering B.S.E.
+	- Technical University of Munich (TU München)  – Computational Mechanics M.Sc.
+- Research interests
+	- Coupled multiphysics
+	- Optimization
+	- High Performance Computing
+
 :::
 
 ::: {.column width="50%" style="text-align:right"}
+
 Advisor: Dr.Ing. Holger Marschall
 
-![](@Medias/HolgerMarschall.jpg){width="7in"}
+![](@Medias/HolgerMarschall.jpg){height="4.7in"}
+
+Research group leader: Computational Multiphase Flow (CMF)
+
+Chief Product & Innovation Officer @ IANUS Simulation
+
 :::
 
 :::: 
 
 :::: {.block .fragment style="text-align:center;" }
-![](@Medias/B3.png){height=350px}
+![](@Medias/B3.png){height=550px}
 ::::
 
 

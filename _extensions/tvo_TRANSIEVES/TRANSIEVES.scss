@@ -34,6 +34,10 @@ $stanford-white: #FFFDFD; // Stanford white color
 // @import 'reveal.js/css/reveal.scss';
 
 // Title slide styling
+#title-slide{
+  margin-top: 20%;
+}
+
 .reveal .slides #title-slide {
 
   // Title
@@ -110,7 +114,7 @@ $stanford-white: #FFFDFD; // Stanford white color
     
     font-weight: 650;
     letter-spacing: 0.02em;
-    margin-top: 2.5vw;
+    margin-top: 2vw;
   }
 
   h4 {
@@ -122,8 +126,8 @@ $stanford-white: #FFFDFD; // Stanford white color
     
     font-weight: 600;
     letter-spacing: 0.03em;
-    margin-top: 3.25vw;
-    margin-left: 2.5vw;
+    margin-top: 1vw;
+    margin-left: 2vw;
 
   }
 }
@@ -138,6 +142,10 @@ $presentation-title-slide-text-align: left;
   vertical-align: top;
 }
 
+// TODO style captions
+figcaption {
+  text-align: center;
+}
 
 // TBD
 // // Override h1 style for title slide (remove section break slide style)
@@ -155,7 +163,25 @@ $presentation-title-slide-text-align: left;
 // 	margin: 10px 15px 35px 0;
 // }
 
+// overflow enabler - for images
+.reveal img.overflow-img {
+  max-width: none !important; 
+  height: auto;
 
+}
+// this version was meant to kick in only if w or h is specified - but does not work like that
+// .reveal .columns img[width],
+// .reveal .columns img[height] {
+//   max-width: unset !important;
+//   max-height: unset !important;
+// }
+
+// center vertically
+// .center-vertical {
+//   display: flex !important;
+//   justify-content: center;
+//   align-items: center;
+// } BAD!! this make everything flex - break formatting
 
 // citation footer
 .reveal .slide aside{
@@ -257,4 +283,27 @@ $presentation-title-slide-text-align: left;
 
 .inline-fragment p {
   padding-right: 10px;
+}
+
+// TBD hspace not used
+.reveal .slides section:not(.title-slide):not(#title-slide) {
+  // Adjust padding to reduce whitespace around content
+  padding: 0 !important;
+
+  // Ensure the content section takes up the full available width
+  max-width: 104% !important;
+  width: 104% !important;
+
+  left: -2% !important;
+  // transform: none !important;
+
+  // Make sure padding and border are included in the element's total width/height calculation
+  box-sizing: border-box;
+
+  // You might also want to remove margins from child elements if they're still causing issues
+  // For example, if you have a wrapper div inside your slides:
+  // > div {
+  //   margin: 0 !important;
+  //   padding: 0 !important;
+  // }
 }

@@ -1,2 +1,48 @@
 <!-- plugins: https://gitlab1.ptb.de/saturn02/ptb-quarto-revealjs-theme/-/tree/main/presentation_files/libs/revealjs/plugin -->
 <!-- crazy css: https://gitlab1.ptb.de/saturn02/ptb-quarto-revealjs-theme/-/blob/main/presentation_files/libs/revealjs/dist/reveal.css -->
+<!-- add different ::::::::::::::::::::::::: levels to templates -->
+<!-- comments above blocks -->
+
+<!-- stack image  -->
+<!-- :::{.r-stack}
+::::{.block .fragment .fade-out}
+![Ionic sorption processes near walls](@Medias/SolvatedIon.png)
+::::
+
+::::{.block .fragment .fade-in-fade-out}
+![Ion concentration profiles resulting from a classical Nernst-Planck formulation solved analytically (left) ^[J. Fuhrmann, C. Guhlke, A. Linke, C. Merdon, and R. Müller, “Models and Numerical Methods for Electrolyte Flows,” CIM Series in Mathematical Sciences. Springer International Publishing, pp. 183–209, 2019. doi: 10.1007/978-3-030-33116-0_8. ]](@Medias/FuhrmannExpStern.png){height="4in"}
+::::
+::: -->
+<!-- stack image -->
+
+<!-- fix title and comments for 2x2 codeblock -->
+<!-- columns widthshould only be fixed by 1 left col -->
+
+
+<!-- TODO disabling max width if w or l is set -->
+<!-- document.addEventListener('DOMContentLoaded', function() {
+  // Find all images within reveal slides
+  const images = document.querySelectorAll('.reveal img');
+
+  images.forEach(img => {
+    // Check if the inline style contains a 'width' property
+    // We use getPropertyValue for robustness, as img.style.width might return "" if not explicitly set inline
+    if (img.style.getPropertyValue('width')) {
+      // If a width is found, apply max-width: none !important;
+      // Using setProperty with !important
+      img.style.setProperty('max-width', 'none', 'important');
+    }
+  });
+}); -->
+
+<!-- TODO make {style="font-size:150%"} into scss into cascading levels of .smaller123 and .larger[]123 -->
+  <!-- should apply to heading,  EXCLUDE HEADING AND footer etc. -->
+  <!-- why: multi columns in vert  -->
+<!-- center vert align with manual: style="margin-top: 10%;" (flex is poison) -->
+
+<!-- BUG!! % height for images does not work -->
+
+<!-- revise [^1] syntax in the aslyamov slide -->
+
+<!-- instead of *** newpage, you can put stuff in a ::: .fade-out  + rstack-->
+<!-- width needs to be put in styles, all! -->

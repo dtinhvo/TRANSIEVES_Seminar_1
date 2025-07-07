@@ -32,7 +32,8 @@ number-sections: false
 <!-- 4. Hybrid-Atomistic-Continuum solver -->
 
 {{< include sections/3_NumericalMethods.qmd >}}
- 
- 
+
+{{< include sections/99_bonus.qmd >}}
+
 
 {{< include sections/dummy.qmd >}}

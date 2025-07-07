@@ -3,8 +3,10 @@
   --r-main-font-size: 40px;
   --r-heading-margin: 0 0 4px 0;
 }
-.reveal .slide aside {
-  bottom: 2em
+.reveal .slide aside .aside-footnotes{
+  font-size: 15px;
+  bottom: 1.2em;
+  line-height: 1.0;
 }
 
 /* trying to center text */

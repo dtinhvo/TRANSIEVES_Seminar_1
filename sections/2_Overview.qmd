@@ -25,9 +25,9 @@ Electrically driven flows
 
 :::{.block .fragment}
 - Resolving the Stern layer numerically is the main challenge
-    - Understood as being exactly one atom thick
-    - exponential value increase
-    - Breakdown of continuum assumptions
+    - Understood as being exactly **one atom thick**
+    - Unbounded exponential value increase in species concentration
+    - **Breakdown of continuum assumptions**
 :::
 <!-- bottom left -->
 
@@ -37,9 +37,11 @@ Electrically driven flows
 Application to nanopores
 
 ![](@Medias/nanopore.png) 
-- Charging time 
-- Permselectivity 
-- 
+
+- Contributions to understanding of mechanics:
+  - Charging time 
+  - Permselectivity 
+
 :::
 
 ::::

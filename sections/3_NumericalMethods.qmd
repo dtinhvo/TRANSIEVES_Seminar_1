@@ -1,13 +1,12 @@
 # Numerical Methods
 <!-- TODO 1b. Proposed Benchmarks -->
 
-
-### Governing equations
+### Governing equations {style="font-size:150%"}
 
 
 :::: {.columns style="width: 100%;"}
 
-::: {.column width="50%" .fragment fragment-index=1}
+::: {.column width="30%" .fragment fragment-index=1}
 
 Navier-Stokes Equations
 
@@ -15,9 +14,13 @@ Navier-Stokes Equations
 <!-- left col -->
 
 
-::: {.column  width="50%" style="text-align:left" .fragment}
-TBD NV desc...
-
+::: {.column  style="text-align:left" .fragment}
+$$
+	\frac{\partial}{\partial t}[\rho\mathbf{v}] + \nabla \cdot \{\rho\mathbf{v}\mathbf{v}\} = -\nabla p + \nabla \cdot \left\{\mu\left[\nabla\mathbf{v} + (\nabla\mathbf{v})^{\text{T}}\right]\right\} + \mathbf{f}_b   
+$$
+$$
+	\frac{\partial\rho}{\partial t} +\nabla\cdot  (\rho\mathbf{u}_{}) = 0   
+$$
 ::: 
 <!-- right col -->
 :::: 
@@ -26,7 +29,7 @@ TBD NV desc...
 
 :::: {.columns style="width: 100%;" }
 
-::: {.column width="50%" .fragment}
+::: {.column width="30%" .fragment}
 
 Species Transport 
 
@@ -35,7 +38,7 @@ Gauss law
 ::: 
 <!-- left col -->
 
-::: {.column width="50%" style="text-align:left" }
+::: {.column style="text-align:left"  .fragment}
 $$
   \frac{ \partial c_{i} }{ \partial t } + \mathbf{u} \cdot \nabla c_{i} = \nabla \cdot(D_{i}\nabla   c_{i})
 	+ \nabla \cdot 
@@ -53,18 +56,45 @@ $$
 :::: 
 <!-- bottom cols -->
 
+### Proposed Benchmarks {style="font-size:120%"}
+
+
+
+:::: {.columns style="width: 100%;"}
+
+::: {.column width="50%"}
+
+
+![Case setup¹](@Medias/2022_Aslyamov_setup.png){height="5in" style="text-align:center"}
+
+<!-- TODO what is TLM? -->
+
+::: 
+<!-- left col -->
+
+::: {.column style="text-align:left"}
+![ Internal electric potential results for thin double layer and small applied potential ^[T. Aslyamov and M. Janssen, “Analytical solution to the Poisson–Nernst–Planck equations for the charging of a long electrolyte-filled slit pore,” Electrochimica Acta, vol. 424. Elsevier BV, p. 140555, Aug. 2022. doi: 10.1016/j.electacta.2022.140555. ]](@Medias/2022_Aslyamov_TLMsol.png){height="6in" style="text-align:center"}
+::: 
+<!-- right col -->
+
+:::: 
+<!-- cols -->
+
+Described leading order solutions of pore charging and electric potential field of a close ended pore, replicating transmission line model solutions
+
+::: {.callout-caution icon=false title="Governing equation discrepancy" } 
+Does not contain convective/advective term
+:::
+
+
 ## Improvement Proposals
-
-### TBD Thermodynamically consistent flux
-
 
 
 ### Implicitly(Block) Coupled solve Nernst-Planck equations
 
+:::: {.columns style="width: 100%;" .fragment}
 
-
-![coupled Navier-Stokes and Poisson-Nernst-Planck solution system ^[ F. Pimenta and M. A. Alves, “A coupled finite-volume solver for numerical simulation of electrically-driven flows,” Computers & Fluids, vol. 193, p. 104279, Oct. 2019, doi: 10.1016/j.compfluid.2019.104279. ]](@Medias/BlockPNP.png){height="25%" style="text-align:center"}
-
+:::: {.column width="35%"}
 ::: {.block .fragment}
 - Motivation: Numerical
   - _Segregated_ solvers are numerically _not robust_
@@ -76,6 +106,20 @@ $$
   - Stable
 	Implementation in OpenFOAM
 :::
+::::
+<!-- left col -->
+
+::: {.column style="text-align:left" .fragment }
+![Coupled Navier-Stokes and Poisson-Nernst-Planck solution system ^[ F. Pimenta and M. A. Alves, “A coupled finite-volume solver for numerical simulation of electrically-driven flows,” Computers & Fluids, vol. 193, p. 104279, Oct. 2019, doi: 10.1016/j.compfluid.2019.104279. ]](@Medias/BlockPNP.png){.overflow-img width="125%" style="text-align:center"}
+::: 
+<!-- right col -->
+
+:::: 
+<!-- cols -->
+
+
+
+
 
 
 
@@ -92,7 +136,6 @@ $$
 
 
 :::: {.block .fragment}
-
 - Goals:
   - Subgrid-scale correction
   - Include sorption processes 
@@ -104,7 +147,16 @@ $$
 <!-- left col -->
 
 ::: {.column width="50%" style="text-align:left"}
-![Ion concentration profiles resulting from a classical Nernst-Planck formulation solved analytically (left) ^[J. Fuhrmann, C. Guhlke, A. Linke, C. Merdon, and R. Müller, “Models and Numerical Methods for Electrolyte Flows,” CIM Series in Mathematical Sciences. Springer International Publishing, pp. 183–209, 2019. doi: 10.1007/978-3-030-33116-0_8. ]](@Medias/FuhrmannExpStern.png){height="4in"}
+
+:::{.r-stack}
+::::{.block .fragment .fade-out}
+![Ionic sorption processes near walls ^[D. M. Kolb, “An atomistic view of electrochemistry,” Surface Science, vol. 500, no. 1–3. Elsevier BV, pp. 722–740, Mar. 2002. doi: 10.1016/s0039-6028(01)01583-7.] ](@Medias/SolvatedIon.png)
+::::
+
+::::{.block .fragment .fade-in-fade-out}
+![Ion concentration profiles resulting from a classical Nernst-Planck formulation solved numerically (left) ^[J. Fuhrmann, C. Guhlke, A. Linke, C. Merdon, and R. Müller, “Models and Numerical Methods for Electrolyte Flows,” CIM Series in Mathematical Sciences. Springer International Publishing, pp. 183–209, 2019. doi: 10.1007/978-3-030-33116-0_8. ]](@Medias/FuhrmannExpStern.png){height="4in"}
+::::
+:::
 ::: 
 <!-- right col -->
 
@@ -115,14 +167,74 @@ $$
 *** 
 
 ### Sorption-enabled Stern layer
-#### Governing equations
+
+#### Governing equations 
+
+
+:::: {.columns style="width: 100%; font-size:150%" }
+
+::: {.column width="50%" .fragment fragment-index=1}
+
+Part of the boundary condition of a ionic system:
+$$
+D_{i} \partial_{n} c_{i} + c_{i} \mu _{i} \partial_{n } \Psi  =0    
+$$
+
+::: 
+<!-- left col -->
+
+
+::: {.column  width="50%" style="text-align:left" .fragment}
+
+Analytical solution:
+$$
+c_{i|b} = c_{i|P}e^{-\mu _{i}/D_{i} \left( \Psi _{|b}  -\Psi _{|P} \right)  } 	 
+$$
+
+::: 
+<!-- right col -->
+
+:::: 
+<!-- top cols -->
+
+
+:::: {.columns style="width: 100%; font-size:150%"  .fragment}
+
+::: {.column width="50%"}
+
+Sorption source term:
+$$
+D_{i} \partial_{n} c_{i} + c_{i} \mu _{i} \partial_{n } \Psi  = -s_i
+$$
+
+::: 
+<!-- left col -->
+
+::: {.column width="50%" style="text-align:left" .fragment}
+
+Solution treatment:
+
+::: {.block style="text-align:center"}
+unknown
+:::
+
+::: 
+<!-- right col -->
+
+:::: 
+<!-- bottom cols -->
 
 
 
-### TBD Thermodynamically consistent flux
-[Change the construction of the electromigration flux]{.fragment}
 
 
+### Thermodynamically Consistent Flux
+
+#### Formulation
+
+::: {.fragment}
+
+Change the construction of the electromigration flux
 
 $$
 \frac{ \partial c_{i} }{ \partial t } + \mathbf{u} \cdot \nabla c_{i} = 
@@ -134,14 +246,14 @@ $$
   \frac{\partial c_{i}}{\partial t} + \nabla \cdot ( 		 \underbrace{c_{i}\color{red}{\mathbf{v}_{}} } 	_\text{advection}+ \mathbf{J_{i}})   =0
 $$
 
-
+:::
 
 
 
 :::: {.columns style="width: 100%;" .fragment}
 
 
-::: {.column width="50%"}
+::: {.column width="35%"}
 
 Existing formulation:
 
@@ -149,10 +261,12 @@ $$
   \mathbf{J}_{i} =   \underbrace{D_{i}\nabla c_{i} }	_\text{diffusion}	 + 	 \underbrace{\left[  \frac{D_{e,i} z_{i}e}{k_{b} T}  \right]c_{i}(-\nabla  \Psi   )} 	_\text{electromigration}
 $$
 
+- No guarantee of mass conservation
+
 ::: 
 <!-- left col -->
 
-::::: {.column width="50%" style="text-align:left" .fragment}
+::::: {.column style="text-align:left" .fragment}
 
 
 Improved Nernst-Planck Proposal ^[J. Fuhrmann, C. Guhlke, A. Linke, C. Merdon, and R. Müller, “Models and Numerical Methods for Electrolyte Flows,” CIM Series in Mathematical Sciences. Springer International Publishing, pp. 183–209, 2019. doi: 10.1007/978-3-030-33116-0_8.]
@@ -202,6 +316,17 @@ $$
 <!-- cols -->
 
 
+***
+
+### Thermodynamically Consistent Flux
+
+#### Goals
+
+- Quasi-incompressible formulation
+  - Pressure-velocity coupling
+  - Density- ion concentration coupling
+- Implementation and validation
+  - Ion **mass conservation**
 
 
 
@@ -211,30 +336,104 @@ $$
 
 
 
+### Atomistic - continuum coupling: Candidates
 
-### Atomistic - continuum coupling
 
-:::: {.columns}
+:::: {.columns style="width: 100%;" }
+
+::: {.column width="50%" style="text-align:center" .fragment }
+
+Grid-based Mesoscale Simulations
+
+![](@Medias/RepMeshing.png){width="75%"}
+
+![Representative setup for mesoscale simulations ^[X. Li and H. Rui, “A Modified Convective Formulation in Navier–Stokes Simulations,” J Sci Comput, vol. 96, no. 3, July 2023, doi: 10.1007/s10915-023-02286-3.] ](@Medias/RepSol.png){width="75%"}
+
+![Candidate framework](@Medias/oFLogo.png)
+
+::: 
+<!-- left col -->
+
+::: {.column style="text-align:center" .fragment }
+
+- Nanoscale simulations:
+  - Represent *molecular* ion crowding
+
+![Previous work simulating nucleate boiling with molecular simulation  ^[G. Gennari, E. R. Smith, G. J. Pringle, and M. Magnini, “Coupled atomistic–continuum simulations of nucleate boiling,” International Journal of Thermal Sciences, vol. 200. Elsevier BV, p. 108954, Jun. 2024. doi: 10.1016/j.ijthermalsci.2024.108954.] ](@Medias/MDboiling.png){width="40%"}
+
+
+![Candidate framework](@Medias/LAMMPSLogo.png){width="30%" style="margin-top: 5%"}
+
+
+::: 
+<!-- right col -->
+
+:::: 
+<!-- cols -->
+
+
+### Atomistic - continuum coupling: Target Framework
+
+
+<!-- next page -->
+:::::: {.block .fragment style="margin-top: 5%" }
+
+
+:::: {.columns   }
+
+::: {.column  style="margin-top: 5%; width:35%"  }
+
+![Schematics of coupling overlap layer ^[E. R. Smith and P. E. Theodorakis, “Multiscale Simulation of Fluids: Coupling Molecular and Continuum,” 2023, arXiv. doi: 10.48550/ARXIV.2308.01669.]](@Medias/CPL.png){height="15%" style="text-align:center"}
+
+:::
+<!-- left col -->
+
+::: {.column style="text-align:center; width:25%"}
+
+![ ](@Medias/oFLAMMPSCPLDiagram.png){height="15%"}
+
+::: 
+<!-- center col -->
+
+::: {.column  style="text-align:center; width:35%"}
+
+![Previous work velocity coupling between molecular and mesoscale simulations using an overlap layer ^[G. Gennari, E. R. Smith, G. J. Pringle, and M. Magnini, “Coupled atomistic–continuum simulations of nucleate boiling,” International Journal of Thermal Sciences, vol. 200. Elsevier BV, p. 108954, Jun. 2024. doi: 10.1016/j.ijthermalsci.2024.108954.]](@Medias/CPL_boiling.png){style="text-align:center"}
+
+<!-- youtube link under https://www.youtube.com/watch?v=OP8b1VXox4U -->
+:::
+<!-- right col -->
+
+
+:::: 
+<!-- cols -->
+
+:::::: 
+<!-- next page -->
+
+### High Performance computing:
+
+:::: {.columns style="width: 100%;" .fragment}
+
 ::: {.column width="50%"}
-Mesoscale simulations 
-<!-- TODO openfoam benchmark image -->
 
-:::
-::: {.column width="50%"}
-Nanoscale simulations
+- Motivation: Numerical
+  - Distributed computing enables concurrent computations
+- Goal:
+  - Dynamic, adaptive mesh refinement
+  - Load Balancing
+  
+::: 
+<!-- left col -->
 
-![](@Medias/LAMMPS.jpg){height="2in"}
+::: {.column width="50%" style="text-align:left" .fragment}
 
-:::
+![Computation domain being distributed across multiple processes ^[W. Bangerth, C. Burstedde, T. Heister, and M. Kronbichler, “Algorithms and data structures for massively parallel generic adaptive finite element codes,” ACM Trans. Math. Softw., vol. 38, no. 2, pp. 1–28, Dec. 2011, doi: 10.1145/2049673.2049678.]](@Medias/dealiiparallel.png)
 
-::::
+![Adaptive mesh refinement](@Medias/AMRmeshing.png)
 
+::: 
+<!-- right col -->
 
-
-::: {.block style="text-align:center"}
--> Coupling between scales 
-:::
-
-<!-- TODO CPL -->
-![](@Medias/CPL.png){height="15%" fig-align="center"}
+:::: 
+<!-- cols -->
 
