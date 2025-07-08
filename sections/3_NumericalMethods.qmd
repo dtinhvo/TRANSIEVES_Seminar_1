@@ -1,7 +1,7 @@
 # Numerical Methods
 <!-- TODO 1b. Proposed Benchmarks -->
 
-### Governing equations {style="font-size:150%"}
+## Governing equations {style="font-size:150%"}
 
 
 :::: {.columns style="width: 100%;"}
@@ -31,7 +31,7 @@ $$
 
 ::: {.column width="30%" .fragment}
 
-Species Transport 
+Species Transport &
 
 
 Gauss law 
@@ -56,7 +56,7 @@ $$
 :::: 
 <!-- bottom cols -->
 
-### Proposed Benchmarks {style="font-size:120%"}
+## Proposed Benchmarks {style="font-size:120%"}
 
 
 
@@ -80,7 +80,11 @@ $$
 :::: 
 <!-- cols -->
 
-Described leading order solutions of pore charging and electric potential field of a close ended pore, replicating transmission line model solutions
+::: {.block style="text-align:center"}
+Described leading order solutions of pore charging and electric potential field of a close ended pore, 
+
+replicating transmission line model solutions
+:::
 
 ::: {.callout-caution icon=false title="Governing equation discrepancy" } 
 Does not contain convective/advective term
@@ -90,7 +94,7 @@ Does not contain convective/advective term
 ## Improvement Proposals
 
 
-### Implicitly(Block) Coupled solve Nernst-Planck equations
+### Implicitly(Block) Coupled solver
 
 :::: {.columns style="width: 100%;" .fragment}
 
@@ -101,10 +105,8 @@ Does not contain convective/advective term
 :::
 ::: {.block .fragment}
 - Goals:
-  - Numerically robust coupled solver
-  - Convergent
+  - Numerically robust
   - Stable
-	Implementation in OpenFOAM
 :::
 ::::
 <!-- left col -->
@@ -149,12 +151,13 @@ Does not contain convective/advective term
 ::: {.column width="50%" style="text-align:left"}
 
 :::{.r-stack}
-::::{.block .fragment .fade-out}
-![Ionic sorption processes near walls ^[D. M. Kolb, “An atomistic view of electrochemistry,” Surface Science, vol. 500, no. 1–3. Elsevier BV, pp. 722–740, Mar. 2002. doi: 10.1016/s0039-6028(01)01583-7.] ](@Medias/SolvatedIon.png)
-::::
 
 ::::{.block .fragment .fade-in-fade-out}
 ![Ion concentration profiles resulting from a classical Nernst-Planck formulation solved numerically (left) ^[J. Fuhrmann, C. Guhlke, A. Linke, C. Merdon, and R. Müller, “Models and Numerical Methods for Electrolyte Flows,” CIM Series in Mathematical Sciences. Springer International Publishing, pp. 183–209, 2019. doi: 10.1007/978-3-030-33116-0_8. ]](@Medias/FuhrmannExpStern.png){height="4in"}
+::::
+
+::::{.block .fragment .fade-out}
+![Ionic sorption processes near walls ^[D. M. Kolb, “An atomistic view of electrochemistry,” Surface Science, vol. 500, no. 1–3. Elsevier BV, pp. 722–740, Mar. 2002. doi: 10.1016/s0039-6028(01)01583-7.] ](@Medias/SolvatedIon.png)
 ::::
 :::
 ::: 
@@ -343,7 +346,7 @@ $$
 
 ::: {.column width="50%" style="text-align:center" .fragment }
 
-Grid-based Mesoscale Simulations
+**Grid-based Mesoscale Simulations**
 
 ![](@Medias/RepMeshing.png){width="75%"}
 
@@ -356,10 +359,11 @@ Grid-based Mesoscale Simulations
 
 ::: {.column style="text-align:center" .fragment }
 
-- Nanoscale simulations:
-  - Represent *molecular* ion crowding
+**Nanoscale simulations**
 
-![Previous work simulating nucleate boiling with molecular simulation  ^[G. Gennari, E. R. Smith, G. J. Pringle, and M. Magnini, “Coupled atomistic–continuum simulations of nucleate boiling,” International Journal of Thermal Sciences, vol. 200. Elsevier BV, p. 108954, Jun. 2024. doi: 10.1016/j.ijthermalsci.2024.108954.] ](@Medias/MDboiling.png){width="40%"}
+Represent *molecular* ion crowding
+
+![Previous work simulating nucleate boiling with molecular simulation  ^[G. Gennari, E. R. Smith, G. J. Pringle, and M. Magnini, “Coupled atomistic–continuum simulations of nucleate boiling,” International Journal of Thermal Sciences, vol. 200. Elsevier BV, p. 108954, Jun. 2024. doi: 10.1016/j.ijthermalsci.2024.108954.] ](@Medias/MDboiling.png){width="36%"}
 
 
 ![Candidate framework](@Medias/LAMMPSLogo.png){width="30%" style="margin-top: 5%"}
@@ -390,7 +394,9 @@ Grid-based Mesoscale Simulations
 
 ::: {.column style="text-align:center; width:25%"}
 
-![ ](@Medias/oFLAMMPSCPLDiagram.png){height="15%"}
+<!-- ![ ](@Medias/oFLAMMPSCPLDiagram.png){height="15%"} -->
+
+![](@Medias/oGLAMMPSCPLDiagram.png){height="500px"}
 
 ::: 
 <!-- center col -->

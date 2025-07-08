@@ -46,3 +46,18 @@
 
 <!-- instead of *** newpage, you can put stuff in a ::: .fade-out  + rstack-->
 <!-- width needs to be put in styles, all! -->
+<!-- make new combined logo -->
+
+<!-- toc inserter: -->
+  <!-- https://stackoverflow.com/questions/60008898/pandoc-separate-table-of-contents-for-each-section -->
+  <!-- https://stackoverflow.com/questions/75024777/changing-on-which-slide-the-toc-appears-in-revealjs-slides-using-quarto -->
+
+<!-- col delim on scss -->
+  <!-- https://gemini.google.com/app/16bb1c00d6245cf5 -->
+<!-- patch ANY occurence of styles to a css selector . -->
+  <!-- .center -->
+<!-- part fade out only on some elements, at specific points -->
+  <!-- or whiteout -->
+  <!-- see slide12-13 -->
+
+<!-- engslide -->

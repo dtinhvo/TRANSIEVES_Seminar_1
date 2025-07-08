@@ -5,7 +5,7 @@
 :::: {.columns style="width: 100%;"}
 
 ::: {.column width="50%"}
-Tinh Vo, M.Sc.
+[**Tinh Vo, M.Sc.**]{style="font-size:120%"}
 
 ![](@Medias/me.jpg){height="4.7in"}
 
@@ -21,13 +21,13 @@ Tinh Vo, M.Sc.
 
 ::: {.column width="50%" style="text-align:right"}
 
-Advisor: Dr.Ing. Holger Marschall
+[**Advisor: Dr.Ing. Holger Marschall**]{style="font-size:120%"}
 
 ![](@Medias/HolgerMarschall.jpg){height="4.7in"}
 
-Research group leader: Computational Multiphase Flow (CMF)
+- Research group leader: Computational Multiphase Flow (CMF)
 
-Chief Product & Innovation Officer @ IANUS Simulation
+- Chief Product & Innovation Officer @ IANUS Simulation
 
 :::
 

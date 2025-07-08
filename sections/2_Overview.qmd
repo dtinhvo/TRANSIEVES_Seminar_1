@@ -1,7 +1,7 @@
 # Project overview
 
 
-## Physical phenomenon
+## Physical phenomenon and application
 Electrically driven flows
 
 :::: {.columns}
@@ -26,7 +26,7 @@ Electrically driven flows
 :::{.block .fragment}
 - Resolving the Stern layer numerically is the main challenge
     - Understood as being exactly **one atom thick**
-    - Unbounded exponential value increase in species concentration
+    - Previous models describes *unbounded, exponential* value increase in species concentration even at *moderate* voltages
     - **Breakdown of continuum assumptions**
 :::
 <!-- bottom left -->
@@ -34,13 +34,13 @@ Electrically driven flows
 :::
 
 ::: {.column width="50%" .fragment}
-Application to nanopores
 
 ![](@Medias/nanopore.png) 
 
 - Contributions to understanding of mechanics:
   - Charging time 
   - Permselectivity 
+  - Species transport
 
 :::
 
