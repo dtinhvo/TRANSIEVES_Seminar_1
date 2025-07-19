@@ -61,3 +61,5 @@
   <!-- see slide12-13 -->
 
 <!-- engslide -->
+
+<!-- more shortcode hints: reveal-hugo.dzello.com -->
