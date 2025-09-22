@@ -5,6 +5,7 @@
 :::: {.columns style="width: 100%;"}
 
 ::: {.column width="50%"}
+
 [**Tinh Vo, M.Sc.**]{style="font-size:120%"}
 
 ![](@Medias/me.jpg){height="4.7in"}

@@ -2,6 +2,7 @@
 
 
 ## Physical phenomenon and application
+
 Electrically driven flows
 
 :::: {.columns}
@@ -19,16 +20,18 @@ Electrically driven flows
 ::: {.column width="15%" style="text-align:right"}
 ![](@Medias/DL.png){height="4in" style="text-align:center"} 
 ::: 
+
 <!-- img overlay -->
 ::::
 <!-- col++ -->
 
-:::{.block .fragment}
+::: {.block .fragment}
 - Resolving the Stern layer numerically is the main challenge
     - Understood as being exactly **one atom thick**
     - Previous models describes *unbounded, exponential* value increase in species concentration even at *moderate* voltages
     - **Breakdown of continuum assumptions**
 :::
+
 <!-- bottom left -->
 
 :::
@@ -47,5 +50,7 @@ Electrically driven flows
 ::::
 
 ::: aside
+
 [1] X. Wang, K. Liu, and J. Wu, “Demystifying the Stern layer at a metal–electrolyte interface: Local dielectric constant, specific ion adsorption, and partial charge transfer,” The Journal of Chemical Physics, vol. 154, no. 12, Mar. 2021, doi: 10.1063/5.0043963. 
+
 :::
